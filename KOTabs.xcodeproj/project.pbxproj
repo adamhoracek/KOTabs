@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		669CFA4A15CEA04800BEA797 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669CFA4915CEA04800BEA797 /* UIKit.framework */; };
+		669CFA4C15CEA04800BEA797 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669CFA4B15CEA04800BEA797 /* Foundation.framework */; };
+		669CFA4E15CEA04800BEA797 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669CFA4D15CEA04800BEA797 /* CoreGraphics.framework */; };
+		669CFA5415CEA04800BEA797 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 669CFA5215CEA04800BEA797 /* InfoPlist.strings */; };
+		669CFA5615CEA04800BEA797 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 669CFA5515CEA04800BEA797 /* main.m */; };
+		669CFA5A15CEA04800BEA797 /* KOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 669CFA5915CEA04800BEA797 /* KOAppDelegate.m */; };
+		669CFA5D15CEA04800BEA797 /* KOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 669CFA5C15CEA04800BEA797 /* KOViewController.m */; };
+		669CFA7115CEA10800BEA797 /* KOTabButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 669CFA6D15CEA10800BEA797 /* KOTabButton.m */; };
+		669CFA7215CEA10800BEA797 /* KOTabs.m in Sources */ = {isa = PBXBuildFile; fileRef = 669CFA6F15CEA10800BEA797 /* KOTabs.m */; };
+		669CFA7515CEA38D00BEA797 /* KOTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 669CFA7415CEA38D00BEA797 /* KOTabView.m */; };
+		669CFA8015CEA93400BEA797 /* close-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 669CFA7715CEA93400BEA797 /* close-off.png */; };
+		669CFA8115CEA93400BEA797 /* close-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 669CFA7815CEA93400BEA797 /* close-off@2x.png */; };
+		669CFA8215CEA93400BEA797 /* close-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 669CFA7915CEA93400BEA797 /* close-on.png */; };
+		669CFA8315CEA93400BEA797 /* close-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 669CFA7A15CEA93400BEA797 /* close-on@2x.png */; };
+		669CFA8415CEA93400BEA797 /* filetab-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 669CFA7B15CEA93400BEA797 /* filetab-bg.png */; };
+		669CFA8515CEA93400BEA797 /* filetab-gradient-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 669CFA7C15CEA93400BEA797 /* filetab-gradient-left.png */; };
+		669CFA8615CEA93400BEA797 /* filetab-gradient-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 669CFA7D15CEA93400BEA797 /* filetab-gradient-left@2x.png */; };
+		669CFA8715CEA93400BEA797 /* filetab-gradient-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 669CFA7E15CEA93400BEA797 /* filetab-gradient-right.png */; };
+		669CFA8815CEA93400BEA797 /* filetab-gradient-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 669CFA7F15CEA93400BEA797 /* filetab-gradient-right@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		669CFA4515CEA04800BEA797 /* KOTabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOTabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		669CFA4915CEA04800BEA797 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		669CFA4B15CEA04800BEA797 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		669CFA4D15CEA04800BEA797 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		669CFA5115CEA04800BEA797 /* KOTabs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KOTabs-Info.plist"; sourceTree = "<group>"; };
+		669CFA5315CEA04800BEA797 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		669CFA5515CEA04800BEA797 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		669CFA5715CEA04800BEA797 /* KOTabs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KOTabs-Prefix.pch"; sourceTree = "<group>"; };
+		669CFA5815CEA04800BEA797 /* KOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KOAppDelegate.h; sourceTree = "<group>"; };
+		669CFA5915CEA04800BEA797 /* KOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KOAppDelegate.m; sourceTree = "<group>"; };
+		669CFA5B15CEA04800BEA797 /* KOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KOViewController.h; sourceTree = "<group>"; };
+		669CFA5C15CEA04800BEA797 /* KOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KOViewController.m; sourceTree = "<group>"; };
+		669CFA6C15CEA10800BEA797 /* KOTabButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KOTabButton.h; sourceTree = "<group>"; };
+		669CFA6D15CEA10800BEA797 /* KOTabButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KOTabButton.m; sourceTree = "<group>"; };
+		669CFA6E15CEA10800BEA797 /* KOTabs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KOTabs.h; sourceTree = "<group>"; };
+		669CFA6F15CEA10800BEA797 /* KOTabs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KOTabs.m; sourceTree = "<group>"; };
+		669CFA7415CEA38D00BEA797 /* KOTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KOTabView.m; sourceTree = "<group>"; };
+		669CFA7615CEA54600BEA797 /* KOTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KOTabView.h; sourceTree = "<group>"; };
+		669CFA7715CEA93400BEA797 /* close-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-off.png"; sourceTree = "<group>"; };
+		669CFA7815CEA93400BEA797 /* close-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-off@2x.png"; sourceTree = "<group>"; };
+		669CFA7915CEA93400BEA797 /* close-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-on.png"; sourceTree = "<group>"; };
+		669CFA7A15CEA93400BEA797 /* close-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-on@2x.png"; sourceTree = "<group>"; };
+		669CFA7B15CEA93400BEA797 /* filetab-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetab-bg.png"; sourceTree = "<group>"; };
+		669CFA7C15CEA93400BEA797 /* filetab-gradient-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetab-gradient-left.png"; sourceTree = "<group>"; };
+		669CFA7D15CEA93400BEA797 /* filetab-gradient-left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetab-gradient-left@2x.png"; sourceTree = "<group>"; };
+		669CFA7E15CEA93400BEA797 /* filetab-gradient-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetab-gradient-right.png"; sourceTree = "<group>"; };
+		669CFA7F15CEA93400BEA797 /* filetab-gradient-right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filetab-gradient-right@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		669CFA4215CEA04800BEA797 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669CFA4A15CEA04800BEA797 /* UIKit.framework in Frameworks */,
+				669CFA4C15CEA04800BEA797 /* Foundation.framework in Frameworks */,
+				669CFA4E15CEA04800BEA797 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		669CFA3A15CEA04800BEA797 = {
+			isa = PBXGroup;
+			children = (
+				669CFA4F15CEA04800BEA797 /* KOTabs */,
+				669CFA4815CEA04800BEA797 /* Frameworks */,
+				669CFA4615CEA04800BEA797 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		669CFA4615CEA04800BEA797 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				669CFA4515CEA04800BEA797 /* KOTabs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		669CFA4815CEA04800BEA797 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				669CFA4915CEA04800BEA797 /* UIKit.framework */,
+				669CFA4B15CEA04800BEA797 /* Foundation.framework */,
+				669CFA4D15CEA04800BEA797 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		669CFA4F15CEA04800BEA797 /* KOTabs */ = {
+			isa = PBXGroup;
+			children = (
+				669CFA8A15CFD29200BEA797 /* Classes */,
+				669CFA5B15CEA04800BEA797 /* KOViewController.h */,
+				669CFA5C15CEA04800BEA797 /* KOViewController.m */,
+				669CFA5815CEA04800BEA797 /* KOAppDelegate.h */,
+				669CFA5915CEA04800BEA797 /* KOAppDelegate.m */,
+				669CFA5015CEA04800BEA797 /* Supporting Files */,
+			);
+			path = KOTabs;
+			sourceTree = "<group>";
+		};
+		669CFA5015CEA04800BEA797 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				669CFA8915CFD28300BEA797 /* Assets */,
+				669CFA5115CEA04800BEA797 /* KOTabs-Info.plist */,
+				669CFA5215CEA04800BEA797 /* InfoPlist.strings */,
+				669CFA5515CEA04800BEA797 /* main.m */,
+				669CFA5715CEA04800BEA797 /* KOTabs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		669CFA8915CFD28300BEA797 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				669CFA7715CEA93400BEA797 /* close-off.png */,
+				669CFA7815CEA93400BEA797 /* close-off@2x.png */,
+				669CFA7915CEA93400BEA797 /* close-on.png */,
+				669CFA7A15CEA93400BEA797 /* close-on@2x.png */,
+				669CFA7B15CEA93400BEA797 /* filetab-bg.png */,
+				669CFA7C15CEA93400BEA797 /* filetab-gradient-left.png */,
+				669CFA7D15CEA93400BEA797 /* filetab-gradient-left@2x.png */,
+				669CFA7E15CEA93400BEA797 /* filetab-gradient-right.png */,
+				669CFA7F15CEA93400BEA797 /* filetab-gradient-right@2x.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		669CFA8A15CFD29200BEA797 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				669CFA6C15CEA10800BEA797 /* KOTabButton.h */,
+				669CFA6D15CEA10800BEA797 /* KOTabButton.m */,
+				669CFA6E15CEA10800BEA797 /* KOTabs.h */,
+				669CFA6F15CEA10800BEA797 /* KOTabs.m */,
+				669CFA7615CEA54600BEA797 /* KOTabView.h */,
+				669CFA7415CEA38D00BEA797 /* KOTabView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		669CFA4415CEA04800BEA797 /* KOTabs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 669CFA6315CEA04800BEA797 /* Build configuration list for PBXNativeTarget "KOTabs" */;
+			buildPhases = (
+				669CFA4115CEA04800BEA797 /* Sources */,
+				669CFA4215CEA04800BEA797 /* Frameworks */,
+				669CFA4315CEA04800BEA797 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KOTabs;
+			productName = KOTabs;
+			productReference = 669CFA4515CEA04800BEA797 /* KOTabs.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		669CFA3C15CEA04800BEA797 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KO;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Adam Horacek";
+			};
+			buildConfigurationList = 669CFA3F15CEA04800BEA797 /* Build configuration list for PBXProject "KOTabs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 669CFA3A15CEA04800BEA797;
+			productRefGroup = 669CFA4615CEA04800BEA797 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				669CFA4415CEA04800BEA797 /* KOTabs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		669CFA4315CEA04800BEA797 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669CFA5415CEA04800BEA797 /* InfoPlist.strings in Resources */,
+				669CFA8015CEA93400BEA797 /* close-off.png in Resources */,
+				669CFA8115CEA93400BEA797 /* close-off@2x.png in Resources */,
+				669CFA8215CEA93400BEA797 /* close-on.png in Resources */,
+				669CFA8315CEA93400BEA797 /* close-on@2x.png in Resources */,
+				669CFA8415CEA93400BEA797 /* filetab-bg.png in Resources */,
+				669CFA8515CEA93400BEA797 /* filetab-gradient-left.png in Resources */,
+				669CFA8615CEA93400BEA797 /* filetab-gradient-left@2x.png in Resources */,
+				669CFA8715CEA93400BEA797 /* filetab-gradient-right.png in Resources */,
+				669CFA8815CEA93400BEA797 /* filetab-gradient-right@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		669CFA4115CEA04800BEA797 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669CFA5615CEA04800BEA797 /* main.m in Sources */,
+				669CFA5A15CEA04800BEA797 /* KOAppDelegate.m in Sources */,
+				669CFA5D15CEA04800BEA797 /* KOViewController.m in Sources */,
+				669CFA7115CEA10800BEA797 /* KOTabButton.m in Sources */,
+				669CFA7215CEA10800BEA797 /* KOTabs.m in Sources */,
+				669CFA7515CEA38D00BEA797 /* KOTabView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		669CFA5215CEA04800BEA797 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				669CFA5315CEA04800BEA797 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		669CFA6115CEA04800BEA797 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		669CFA6215CEA04800BEA797 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		669CFA6415CEA04800BEA797 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KOTabs/KOTabs-Prefix.pch";
+				INFOPLIST_FILE = "KOTabs/KOTabs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		669CFA6515CEA04800BEA797 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KOTabs/KOTabs-Prefix.pch";
+				INFOPLIST_FILE = "KOTabs/KOTabs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		669CFA3F15CEA04800BEA797 /* Build configuration list for PBXProject "KOTabs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				669CFA6115CEA04800BEA797 /* Debug */,
+				669CFA6215CEA04800BEA797 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		669CFA6315CEA04800BEA797 /* Build configuration list for PBXNativeTarget "KOTabs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				669CFA6415CEA04800BEA797 /* Debug */,
+				669CFA6515CEA04800BEA797 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 669CFA3C15CEA04800BEA797 /* Project object */;
+}
