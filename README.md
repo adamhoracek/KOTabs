@@ -3,7 +3,7 @@ KOTabs – iOS component for multiple tabs
 
 With **KOTabs** you can easily create a tabbed document interface. The user can switch between tabs with a single tap. The tabs can be closed with the "x" icon in the corner. When there are more tabs than the screen can show, the whole bar can be scrolled to the side. It was developed for [Kodiak PHP](http://www.becomekodiak.com/), an app which allows you to write and run PHP code directly on the iPad.
 
-To see the component in action, take a look at the video at [http://www.becomekodiak.com/](http://www.becomekodiak.com/) or try out app called [Kodiak PHP on the App Store](http://itunes.apple.com/us/app/kodiak-php/id542685332?ls=1&mt=8).
+To see the component in action, take a look at the video at [http://www.becomekodiak.com/](http://www.becomekodiak.com/) or try our app called [Kodiak PHP on the App Store](http://itunes.apple.com/us/app/kodiak-php/id542685332?ls=1&mt=8).
 
 <img src="http://i.imgur.com/npej3.png">
 
