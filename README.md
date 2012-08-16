@@ -46,6 +46,7 @@ This product is free and open source and it is distributed under the MIT License
 Contact
 -------
 
-info@becomekodiak.com<br />
-www.becomekodiak.com
+http://www.becomekodiak.com/<br />
+http://www.twitter.com/becomekodiak/<br />
+info@becomekodiak.com
 
