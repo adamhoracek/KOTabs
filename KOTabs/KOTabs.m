@@ -348,7 +348,7 @@
 		[self setActiveViewIndex:[(KOTabButton *)sender index]];
 	}
 	
-	if (delegate && [delegate respondsToSelector:@selector(tabbedView:didSwitchFile:)])
+	if (delegate && [delegate respondsToSelector:@selector(tabs:didSwitchItem:)])
 		[delegate tabs:self didSwitchItem:nil];
 }
 
