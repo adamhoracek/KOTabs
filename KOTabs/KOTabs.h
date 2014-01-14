@@ -59,4 +59,11 @@
 - (void)selectButtonAtIndex:(id)sender;
 - (KOTabView *)activeTabView;
 
+/////////////////////////HUNGDM UPDATE/////////////////////
+@property (nonatomic, strong) UIButton* goLeftBtn, *goRightBtn;
+-(UIButton*) leftButton;
+-(UIButton*) rightButton;
+-(void) goLeft:(id)sender;
+-(void)goRight:(id)sender;
+
 @end

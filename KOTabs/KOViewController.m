@@ -42,7 +42,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	
+	/*
 	KOTabView *tabView1 = [[KOTabView alloc] initWithFrame:self.view.bounds];
 	[tabView1 setBackgroundColor:[UIColor purpleColor]];
 	[tabView1 setIndex:0];
@@ -59,7 +59,18 @@
 	[tabView3 setName:@"tabView1"];
 	
 	NSMutableArray *tabViews = [NSMutableArray arrayWithObjects:tabView1, tabView2, tabView3, nil];
+	*/
+    NSMutableArray *tabViews = [NSMutableArray arrayWithCapacity: 10];
 	
+    for( int i = 0; i < 10; i ++){
+        KOTabView *tabView1 = [[KOTabView alloc] initWithFrame:self.view.bounds];
+        [tabView1 setBackgroundColor:[UIColor purpleColor]];
+        [tabView1 setIndex:i];
+        [tabView1 setName: [NSString stringWithFormat:@"tabView:%i", i]];
+        
+        [tabViews addObject: tabView1];
+	}
+
 	KOTabs *tabs = [[KOTabs alloc] initWithFrame:self.view.bounds];
 	[tabs setDelegate:(id<KOTabsDelegate>)self];
 	

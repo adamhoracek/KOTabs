@@ -31,7 +31,7 @@
 //  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 //  OTHER DEALINGS IN THE SOFTWARE.
 //
-
+//14/01/2014: Hungdm9999 add left&right buttons when you have much buttons that invisible on the screen
 #import "KOTabs.h"
 #import <QuartzCore/QuartzCore.h>
 #import "KOTabButton.h"
@@ -50,6 +50,8 @@
 @synthesize tabViews, buttonViews;
 @synthesize activeBarIndex, activeViewIndex;
 @synthesize delegate;
+//Hung support left-right
+@synthesize goLeftBtn, goRightBtn;
 
 #define OVERKILL 2048
 
@@ -70,7 +72,30 @@
 		CGRect rect = tabbedBar.frame;
 		rect.size.height = 33;
 		tabbedBar.frame = rect;
-		
+
+        //hungdm9999 resize width to make room for left-right button
+        CGRect leftRect = CGRectMake(0, 0, 33, 33);
+        CGRect rightRect = CGRectMake( rect.size.width - 33, 0, 33, 33);
+        goLeftBtn = [[UIButton alloc] initWithFrame: leftRect];
+        [goLeftBtn setBackgroundColor:[UIColor yellowColor]];
+        [goLeftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [goLeftBtn setTitle:@"<" forState:UIControlStateNormal];
+        [goLeftBtn addTarget:self action:@selector(goLeft:) forControlEvents:UIControlEventTouchUpInside];
+        
+        goRightBtn =[[UIButton alloc] initWithFrame: rightRect];
+        [goRightBtn setBackgroundColor:[UIColor yellowColor]];
+        [goRightBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [goRightBtn setTitle:@">" forState:UIControlStateNormal];
+        [goRightBtn addTarget:self action:@selector(goRight:) forControlEvents:UIControlEventTouchUpInside];
+        
+        rect.origin.x = 33; //move left
+        rect.size.width -= 66;
+        tabbedBar.frame = rect; //resize width
+        tabbedBar.showsHorizontalScrollIndicator = YES;
+        tabbedBar.showsHorizontalScrollIndicator = YES;
+
+        //Hungdm9999 end
+
 		shadowView = [[UIView alloc] initWithFrame:rect];
 		[shadowView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
 		
@@ -97,7 +122,10 @@
 		[self addSubview:tabbedView];
 		[self addSubview:shadowView];
 		[self addSubview:tabbedBar];
-		
+        //hungdm9999 add leff and right buttons
+        [self addSubview: goLeftBtn];
+        [self addSubview:goRightBtn];
+
 		activeBarIndex = 0;
     }
     return self;
@@ -239,7 +267,9 @@
 	[UIView commitAnimations];
 	
 	
-		
+    //hungdm9999: calculate new layout here
+    [self layoutTittle];
+	
 }
 
 - (void)setActiveViewIndex:(NSInteger)_activeViewIndex {
@@ -356,4 +386,66 @@
 	return [[self tabViews] objectAtIndex:activeBarIndex];
 }
 
+
+//14/01/2013: HungDM add goleft, goright
+#pragma mark add left and right buttons
+//leftbutton clicked
+-(void) goLeft:(id)sender{
+    //    UIView* buttonView = [self.buttonViews objectAtIndex:activeBarIndex];
+    
+    if( activeBarIndex > 0){
+        NSInteger nextIndex = activeBarIndex - 1;
+        NSLog(@"goLeft-current index:%i, will goto:%i", activeBarIndex, nextIndex);
+        [self setActiveBarIndex:nextIndex];
+        [self setActiveViewIndex:nextIndex];
+        NSLog(@"Set activeIndex to:%i", nextIndex);
+        
+    }else{
+        NSLog(@"goLeft-current index:%i. Standstill",activeBarIndex);
+    }
+    
+}
+
+//rightbutton clicked
+-(void)goRight:(id)sender{
+    
+    if( activeBarIndex < [self.buttonViews count] - 1){
+        NSInteger nextIndex = activeBarIndex + 1;
+        NSLog(@"goRight-current index:%i, will goto:%i", activeBarIndex, nextIndex );
+        [self setActiveBarIndex: nextIndex];
+        [self setActiveViewIndex: nextIndex];
+    }else{
+        NSLog(@"goLeft-current index:%i. Standstill",activeBarIndex);
+    }
+}
+-(UIButton*) leftButton{
+    return goLeftBtn;
+}
+-(UIButton*) rightButton{
+    return goRightBtn;
+}
+
+-(void)layoutTittle{
+    /////////////////////hungdm9999 start here//////////////
+    NSLog(@"Set activeIndex to:%i", activeBarIndex);
+    CGRect thePosition =  ((UIView*)[buttonViews objectAtIndex:activeBarIndex]).frame;
+    CGRect visibleScrollRect = CGRectMake(tabbedBar.contentOffset.x, tabbedBar.contentOffset.y, tabbedBar.frame.size.width, tabbedBar.frame.size.height);
+    
+    if(!CGRectIntersectsRect(thePosition, visibleScrollRect))
+    {
+        // This view has been scrolled on screen
+        if( thePosition.origin.x + thePosition.size.width < visibleScrollRect.origin.x){
+            CGFloat shouldMove =visibleScrollRect.origin.x - (thePosition.origin.x + thePosition.size.width ) + thePosition.size.width;
+            [tabbedBar setContentOffset: CGPointMake(tabbedBar.contentOffset.x - shouldMove, tabbedBar.
+                                                     contentOffset.y)];
+        }else if( thePosition.origin.x + thePosition.size.width >= visibleScrollRect.origin.x + visibleScrollRect.size.width){
+            CGFloat shouldMove = (thePosition.origin.x + thePosition.size.width) - (visibleScrollRect.origin.x + visibleScrollRect.size.width);
+            
+            [tabbedBar setContentOffset: CGPointMake(tabbedBar.contentOffset.x + shouldMove, tabbedBar.
+                                                     contentOffset.y)];
+            
+        }
+    }
+}
+#pragma mark -
 @end
